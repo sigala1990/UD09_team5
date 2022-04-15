@@ -1,4 +1,4 @@
-# UD09_team5
+# UD09_team5  Authors: Isidre, Veronika, Adria.
 Herencias
 
 
