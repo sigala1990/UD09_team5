@@ -1,50 +1,43 @@
 package act5;
 
-import act5.Persona.Genero;
-
 public abstract class Persona {
 
-	public enum Genero{hombre, mujer};
+	
+	protected final String Genero[] = {"hombre", "mujer"};
+	
+	
 	protected String nombre;
 	protected int edad;
-	protected Genero sexo;
-	
-	
+	protected String sexo;
 	
 	public Persona() {
-		//super();
 		this.nombre = sacarNombre(arrayMujerNombre(), arrayHombreNombre());
 		this.edad = edadAleatorio ();
 		this.sexo = sexoAleatorio(arrayMujerNombre(),arrayHombreNombre());
 	}
 	
-	public Persona(String nombre, int edad/*, Object sexo*/) {
-		//super();
-		this.nombre = nombre;
-		this.edad = edad;
-		//this.sexo =sexo ;
-	}
 	
 	//metodo si hombre o mujer en funcion del nombre
-	public Genero sexoAleatorio (String[] nombreMujer, String[] nombreHombre) {
+	public String sexoAleatorio (String[] nombreMujer, String[] nombreHombre) {
 
 		for (int i = 0; i < nombreHombre.length; i++) {
 			if(nombre == nombreMujer[i]) {
-				return Genero.mujer;
+				return Genero[1];
 			}
 			if(nombre == nombreHombre[i]) {
-				return Genero.hombre;
+				return Genero[0];
 			}
 		}
 		return null;	
 	}
 	
+	// Array de hombres
 	public String[] arrayHombreNombre() {
 		String[] nomHombre = {"Toni", "Ivan", "Marc", "Pedro"};
 		return nomHombre;
-	
-		
 	}
+	
+	//Array de mujeres
 	public String[] arrayMujerNombre() {
 		String[] nomMujer = {"Eva", "Ana", "Sonia", "Marta"};
 		return nomMujer ;
@@ -53,13 +46,14 @@ public abstract class Persona {
 	// Metodo para sacar nombre
 	public String sacarNombre (String[] nombreMujer, String[] nombreHombre){
 				
-		int x= (int) Math.random()*(4-0)+0;
+		int x= (int) (Math.random()*(4-0)+0);
 
 		int y= (int) (Math.random() * (4 - 1) + 1);
 		if(x >2) {
 			return nombreHombre[y];
 			
 		}else{
+			System.out.println(x);
 				return nombreMujer[y];
 		}
 	}
@@ -71,6 +65,7 @@ public abstract class Persona {
 	public abstract int edadAleatorio ();
 	
 	
+	// Getters & Setters
 	public String getNombre() {
 		return nombre;
 	}
@@ -91,12 +86,12 @@ public abstract class Persona {
 	}
 
 
-	public Genero getSexo() {
+	public String getSexo() {
 		return sexo;
 	}
 
 
-	public void setSexo(Genero sexo) {
+	public void setSexo(String sexo) {
 		this.sexo = sexo;
 	}
 
