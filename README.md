@@ -3,6 +3,7 @@ Herencias
 
 
 Act 3
+
 ![uml_libro](https://user-images.githubusercontent.com/89861246/163630471-cc3c5fec-0322-40d3-8f7c-52e7bce06d75.png)
 
 
