@@ -2,20 +2,13 @@ package act5;
 
 public class Estudiante extends Persona {
 	
-	public enum Genero{hombre, mujer};
+	//public enum Genero{hombre, mujer};
 	 private double calificacion;
 
 	
 	public Estudiante() {
 		super();
 		this.calificacion = 0;
-	}
-	
-	
-	public Estudiante(String nombre, int edad,double calificacion) {
-		super(nombre, edad/*, sexo */);
-		this.calificacion = calificacion;
-		this.nombre=nombre;
 	}
 
 
@@ -39,7 +32,7 @@ public class Estudiante extends Persona {
 
 	
 	
-	//metode ens dona un nombre aleatori de nota --> int (0-9)
+	//metodo que da una nota entre 0 a 10
 	public String numeroNota () {
 		
 		double notar= Math.random()*(9)+1;
@@ -49,7 +42,7 @@ public class Estudiante extends Persona {
 	//Metodo que da una edad aleatoria entre un intervalo
 	public int edadAleatorio () {
 
-		int edad1= (int) (Math.random() * (25 - 16) + 1);
+		int edad1= (int) (Math.random() * (25 - 16) + 16);
 		
 		return edad1;
 	}
@@ -57,12 +50,15 @@ public class Estudiante extends Persona {
 	//Metodo que da ausencia o presencia en boleano
 	public boolean ausenciaAleatorio () {
 		
-		int ausencia= (int) (Math.random());
+		double ausencia= (Math.random());
 		if (ausencia>0.5) {
+			
 			return true;
 		}else {
+			
 			return false;
 		}
+		
 	}
 	
 }
