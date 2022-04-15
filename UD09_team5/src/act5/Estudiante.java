@@ -4,15 +4,14 @@ public class Estudiante extends Persona {
 	
 	//public enum Genero{hombre, mujer};
 	 private double calificacion;
+	 
 
 	
 	public Estudiante() {
 		super();
-		this.calificacion = 0;
+		this.calificacion = numeroNota();
+		this.esAusente = ausenciaAleatorio();
 	}
-
-
-
 
 	public double getCalificacion() {
 		return calificacion;
@@ -33,11 +32,12 @@ public class Estudiante extends Persona {
 	
 	
 	//metodo que da una nota entre 0 a 10
-	public String numeroNota () {
-		
+	public double numeroNota () {
+		//System.out.println((double)Math.round(number * 100d) / 100d);
 		double notar= Math.random()*(9)+1;
-		return String.format("%.2f", notar);
-
+		//String valorString = String.format("%.2f", notar);
+		//double nota = Double.valueOf( valorString);
+		return (double) Math.round(notar*100d)/ 100d;
 	}
 	//Metodo que da una edad aleatoria entre un intervalo
 	public int edadAleatorio () {
@@ -49,13 +49,11 @@ public class Estudiante extends Persona {
 	
 	//Metodo que da ausencia o presencia en boleano
 	public boolean ausenciaAleatorio () {
-		
+		//return (int) (Math.random() * (max - min) + min);
 		double ausencia= (Math.random());
 		if (ausencia>0.5) {
-			
 			return true;
 		}else {
-			
 			return false;
 		}
 		

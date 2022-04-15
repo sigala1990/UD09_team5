@@ -54,7 +54,7 @@ public abstract class Persona {
 			return nombreHombre[y];
 			
 		}else{
-			System.out.println(x);
+			//System.out.println(x);
 				return nombreMujer[y];
 		}
 	}
