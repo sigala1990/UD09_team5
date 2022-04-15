@@ -7,7 +7,7 @@ public class Aula {
 		filosofia,
 		fisica
 	}
-	
+	////////
 	private int id;
 	private int cantidadAlumnos;
 	private boolean profesorDisponible; // ?
