@@ -97,7 +97,17 @@ public abstract class Persona {
 	}
 
 
+	public boolean isEsAusente() {
+		return esAusente;
+	}
 
-	
+	public void setEsAusente(boolean esAusente) {
+		this.esAusente = esAusente;
+	}
+
+
+	public String[] getGenero() {
+		return Genero;
+	}	
 	
 }

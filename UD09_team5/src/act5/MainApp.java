@@ -11,6 +11,7 @@ public class MainApp {
 		
 		System.out.println(profesor.getNombre() + " " + profesor.getEdad() + " " + profesor.getQueMateria());
 		System.out.println(estudiante.getNombre() + " " + estudiante.getEdad() + " " + estudiante.getEdad());
+		System.out.println(profesor.isEsAusente()); //boolean se visualiza a través de is(nombre método)
 		
 		//instancializamos la clase Aula pasándole por parámetros objetos de las clases-hijas
 		//Aula aula = new Aula(estudiante, profesor);
