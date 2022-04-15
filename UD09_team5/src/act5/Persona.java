@@ -9,6 +9,7 @@ public abstract class Persona {
 	protected String nombre;
 	protected int edad;
 	protected String sexo;
+	protected boolean esAusente;
 	
 	public Persona() {
 		this.nombre = sacarNombre(arrayMujerNombre(), arrayHombreNombre());
