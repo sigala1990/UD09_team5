@@ -1,31 +1,27 @@
 package act5;
 
+/*
+ * @author Veronika Polonchak
+ */
+
 import java.util.Random;
 
 public class Profesor extends Persona {
-	
-	//ATRIBUTOS PROPIOS
+
+	// atribútos propios
 	private String queMateria;
-	private final String MATERIAS[] = {"matemáticas", "filosofia", "física"};
-	
-	
-	//CONSTRUCTORES
+	private final String MATERIAS[] = { "matemáticas", "filosofia", "física" };
+
+	// constructor por defecto
 	public Profesor() {
 		super();
+		this.edad = edadAleatorio();
+		this.queMateria = obtenerMateria();
+		//this.esAusente =  ausenciaAleatorio(); //TODO falta crear la varible esAusente en la clase Persona
+
 	}
 
-	public Profesor(String queMateria) {
-		super();
-		this.queMateria = queMateria;
-	}
-	
-	public Profesor(String nombre, int edad, char sexo, String queMateria) {
-		super(nombre, edad, sexo);
-		this.queMateria = queMateria;
-	}
-
-	
-	//GETTERS Y SETTERS
+	// getters y setters
 	public String getQueMateria() {
 		return queMateria;
 	}
@@ -33,36 +29,36 @@ public class Profesor extends Persona {
 	public void setQueMateria(String queMateria) {
 		this.queMateria = queMateria;
 	}
-	
-	
-	//MÉTODOS PROPIOS
-	//comprobamos si el profe es ausente
-	public boolean esAusente() {
-		boolean ausente = false;
-		//20% de probabilidad de estar ausente
+
+	// comprobamos la disponibilidad del profesor
+	public boolean ausenciaAleatorio() {
+
+		// el profesor tiene 20% de no encontrarse disponible
 		int aleatorio = (int) (Math.random() * 10 + 1);
-		if(aleatorio <= 2) {
-			ausente = true;
+		if (aleatorio <= 2) {
+			return true;
 		}
-		return ausente;
+		return false;
 	}
-	
-	
-	//asignamos la edad del profesor entre márgenes razonables
-	public int declaraEdad() {
+
+	// asignamos la edad del profesor
+	public int edadAleatorio() {
 		Random rnd = new Random();
-		//la edad de profesor puede ser entre 25 y 65 años.
-		int edadAleatoria = rnd.nextInt(40)+25;	
+		// la edad del profesor ha de ser entre 25 y 65 años
+		int edadAleatoria = rnd.nextInt(40) + 25;
 		return edadAleatoria;
 	}
-		
-	
-	//asignamos una materia random que imparte el profe
-	public void obtenerMateria() {
+
+	// generamos una materia aleatoria que importe el profesor
+	public String obtenerMateria() {
 		int materiaAleatoria = (int) (Math.random() * 3);
-		this.queMateria = MATERIAS[materiaAleatoria];
-		
-	}	
-	
-	
+		return MATERIAS[materiaAleatoria];
+
+	}
+
+	@Override
+	public String toString() {
+		return "Profesor [queMateria=" + queMateria + "]";
+	}
+
 }
