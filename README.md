@@ -11,3 +11,6 @@ Act5. Crea una Aula, donde tendra a Personas que podran ser Estudiantes o Profes
 
 ![act5](https://user-images.githubusercontent.com/9555509/163565202-5bc0fe49-4e18-4559-b501-9c029bbbd520.png)
 
+Act6. Crea un cine que colocara espectadores aleatorios por toda la sala.
+
+![act6](https://user-images.githubusercontent.com/9555509/163635582-1ccd1ebf-c71c-4735-9934-83306f0b3250.png)
