@@ -3,7 +3,7 @@ Herencias
 
 Act1
 
-![diagrama Ej01 drawio](https://user-images.githubusercontent.com/103040138/163667753-77dcb3d9-02b8-45c2-b5ef-248bee6b84f9.png)
+![diagrama Ej01 drawio (1)](https://user-images.githubusercontent.com/103040138/163668057-c2272b35-f635-48fb-8fc2-e07edf26bbf6.png)
 
 Act3
 
