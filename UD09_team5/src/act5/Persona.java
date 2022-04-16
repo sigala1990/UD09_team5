@@ -54,7 +54,7 @@ public abstract class Persona {
 			return nombreHombre[y];
 			
 		}else{
-			System.out.println(x);
+			//System.out.println(x);
 				return nombreMujer[y];
 		}
 	}
@@ -97,7 +97,17 @@ public abstract class Persona {
 	}
 
 
+	public boolean isEsAusente() {
+		return esAusente;
+	}
 
-	
+	public void setEsAusente(boolean esAusente) {
+		this.esAusente = esAusente;
+	}
+
+
+	public String[] getGenero() {
+		return Genero;
+	}	
 	
 }
