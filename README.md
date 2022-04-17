@@ -22,7 +22,8 @@ Act5. Crea una Aula, donde tendra a Personas que podran ser Estudiantes o Profes
 
 ![act5](https://user-images.githubusercontent.com/9555509/163565202-5bc0fe49-4e18-4559-b501-9c029bbbd520.png)
 
-Act6. Crea un cine que colocara espectadores aleatorios por toda la sala.
+Act6. Crea una sala de cina, que tendra una array bidimensional de asientos, contendra una pelicula y tendra una lista de espectadores.
+Luego tendrá que comprobar si cada espectador cumple con los requisitos ( edad y tenga dinero) y por ultimo sentarlo a las sillas hasta que este el cine lleno o no tenga mas espectadores.
 
 ![act6](https://user-images.githubusercontent.com/9555509/163720865-4fa94747-bc50-4e04-a752-283b93eeece3.png)
 
