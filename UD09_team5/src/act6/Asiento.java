@@ -2,6 +2,7 @@ package act6;
 
 public class Asiento {
 
+	//atributos
 	private boolean ocupado;
 	private String posicion;
 	private Espectador espectador;

@@ -34,7 +34,7 @@ public class Sala {
 		for (int i = 0; i < espectadores.size(); i++) {// los clientes hacen cola, y vamos mirando 1 a 1 que todo este en orden
 
 
-			if (clientePuedeEntrar(espectadores.get(i))) {// controlamos si puede entrar
+			if (clientePuedeEntrar(espectadores.get(i)) && controlAsientosDisponibles(asientos)) {// controlamos si puede entrar el espectador Y siguen habiendo plazas
 				
 				do{
 					int contadorButaca = 0;
@@ -46,18 +46,21 @@ public class Sala {
 							contadorButaca++;
 							if (contadorButaca == numAsientoAsignado) {// encontramos el asiento
 								if (!asientos[j][j2].isOcupado()) {// miramos si NO esta ocupado
+									System.out.println(espectadores.get(i).getNombre()+ " se sentara en la butaca "+ asientos[j][j2].getPosicion());
 									asientos[j][j2].setOcupado(true);// indicamos que el asiento esta ocupado
 									asientos[j][j2].setEspectador(espectadores.get(i));
 									asientos[j][j2].setPosicion("XX");
-									
+						
 								} else {
 									repetimos = true;//silla ocupada
 								}
 							}
 						}
 					}
-				}while(repetimos);
+				}while(repetimos);// el while esta para que si un espectador se le asigna una butaca ocupada, pueda volver a buscar una disponible
 			
+			}else{
+				System.out.println(espectadores.get(i).getNombre()+ " no puede entrar.");
 			}
 
 		}
@@ -72,7 +75,17 @@ public class Sala {
 		}
 		return asientos;
 	}
-
+	
+	public boolean controlAsientosDisponibles(Asiento[][] asientos) {
+		int contadorAsientosDisponibles = 0;
+		for (int i = 0; i < asientos.length; i++) {
+			for (int j = 0; j < asientos[0].length; j++) {
+				if(!asientos[i][j].isOcupado()) { //controlamos que tenga almenos 1 espacio libre
+					return true;
+				}
+			}
+		}return false;
+	}
 	public Asiento[][] rellenarPosicionAsiento(Asiento[][] asientos) {
 		int height = asientos.length;// altura array
 		int width = asientos[0].length;// anchura array

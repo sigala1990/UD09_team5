@@ -3,9 +3,12 @@ package act6;
 public class Espectador {
 	private String[] Nombres = {"Antonio", "Pepi", "Flores", "Alberto","Susi", "Adri", "Java", "Html", "Franki", "Espartaca", "Watson", "Ivet", "NicolasCage"};
 	
+	
+	//atributos
 	private String nombre;
 	private int edad;
 	private double dinero;
+	
 	
 	public Espectador() {
 		this.nombre = nombreRandom();
@@ -29,6 +32,8 @@ public class Espectador {
 		return (int) (Math.random() * (max - min) + min);
 	}
 
+	
+	//gettser setters
 	public String[] getNombres() {
 		return Nombres;
 	}

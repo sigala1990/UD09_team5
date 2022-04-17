@@ -44,7 +44,7 @@ public class Pelicula {
 		return (int) (Math.random() * (max - min) + min);
 	}
 
-
+	//getters setters
 	public int[] getEdad() {
 		return Edad;
 	}
