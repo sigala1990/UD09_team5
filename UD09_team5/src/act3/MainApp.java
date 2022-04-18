@@ -33,5 +33,17 @@ public class MainApp {
 
 		}
 	}
+	
+	/*
+	 * -------------CORRECCION ADRI QUERALT
+	 * 
+	 * ----------EL enunciado pide que al momento de mostrar por print una clase tenga un formato en concreto
+	 * /*	@Override
+	public String toString() {
+		return "Libro [ISBN=" + ISBN + ", titulo=" + titulo + ", autor=" + autor + ", numeroPaginas=" + numeroPaginas
+				+ "]";
+	}*/
+	
+	 
 
 }

@@ -43,7 +43,7 @@ public class MainApp {
 		// invocamos el método que muestra el videojuego con la cantidad máxima de horas
 		// estimadas pasándole como parámetro array de videojuegos
 		videojuegoMaxHorasEstimadas(misVideojuegos);
-
+		
 	}
 
 	public static void cantidadesEntregadas(Serie[] serie, Videojuego[] videojuego) {
@@ -103,5 +103,40 @@ public class MainApp {
 		System.out.println("El videojuego con la cantidad máxima de horas estimadas: ");
 		System.out.println(videojuego[posicionMaxTemporadas].toString());
 	}
+	
+	
+	//////Correccion Adria QUeralt
+	/*
+	 * El enunciado especifica que el constructor de Serie sera de todos los atributos, excepto entregado, por lo tanto entregado tendrias que darle el valor false ya que no lo especificas
+	 * 
+	 * 	// constructor con todos los atributos como parámetros, exepto de entregado
+		public Serie(String titulo, int numeroTemporadas, String genero, String creador) {
 
+			this.titulo = titulo;
+			this.numeroTemporadas = numeroTemporadas;
+			this.genero = genero;
+			this.creador = creador;
+		}
+		
+	* 	// constructor con todos los atributos exepto entregado
+		public Videojuego(String titulo, int horasEstimadas, String genero, String companya) {
+	
+			this.titulo = titulo;
+			this.horasEstimadas = horasEstimadas;
+			this.genero = genero;
+			this.companya = companya;
+		}
+	* 
+	* 	///////////////// No entiendo como funciona
+	*		@Override
+		public void compareTo(Object a) {
+	
+			if (a instanceof Videojuego) {
+				System.out.println(((Videojuego) a).getHorasEstimadas());
+			}
+	
+		}	
+	* ////////////// TO DO LO DEMAS ESTUPENDO
+	*/
+	
 }

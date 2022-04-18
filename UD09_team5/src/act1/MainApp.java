@@ -43,6 +43,14 @@ public class MainApp {
 		Ejecutable ejecutable1= new Ejecutable();
 		
 		
+		//CORRECCIONES AUTH ADRIA QUERALT
+		/*
+		 * Los nombre de variables tienen que describir que son o para que sirven.
+		 *		 * Todo lo demas esta perfecto
+		 */
+		
+		
+		
 		ejecutable1.recorreArray();
 	}
 
