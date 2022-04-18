@@ -41,6 +41,7 @@ public class Videojuego implements Entregable {
 		this.horasEstimadas = horasEstimadas;
 		this.genero = genero;
 		this.companya = companya;
+		this.entregado = false;
 	}
 
 	// getters y setters

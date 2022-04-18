@@ -41,6 +41,7 @@ public class Serie implements Entregable {
 		this.numeroTemporadas = numeroTemporadas;
 		this.genero = genero;
 		this.creador = creador;
+		this.entregado = false;
 	}
 
 	// getters y setters
