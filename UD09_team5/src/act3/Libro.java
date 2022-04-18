@@ -64,10 +64,15 @@ public class Libro {
 		this.numeroPaginas = numeroPaginas;
 	}
 
-	@Override
+/*	@Override
 	public String toString() {
 		return "Libro [ISBN=" + ISBN + ", titulo=" + titulo + ", autor=" + autor + ", numeroPaginas=" + numeroPaginas
 				+ "]";
+	}*/
+	
+	@Override
+	public String toString() {
+		return "El libro "+titulo+" con ISBN " + ISBN + " creado por el "+ autor +"  tiene " + numeroPaginas + " paginas.";
 	}
 
 }
