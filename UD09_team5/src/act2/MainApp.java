@@ -13,11 +13,11 @@ public class MainApp {
 		Videojuego misVideojuegos[] = new Videojuego[5];
 
 		// asignamos valores a los arrays
-		misSeries[0] = new Serie("Los vikingos", 6, "Drama histórico", "Michael Hirst");
-		misSeries[1] = new Serie("El cuento de la criada", 4, "Ficción utópica y distópica", "Michael Hirst");
+		misSeries[0] = new Serie("Los vikingos", 6, "Drama histÃ³rico", "Michael Hirst");
+		misSeries[1] = new Serie("El cuento de la criada", 4, "FicciÃ³n utÃ³pica y distÃ³pica", "Michael Hirst");
 		misSeries[2] = new Serie("El juego del calamar", 1, "Drama", "Hwang Dong-Hyuk");
 		misSeries[3] = new Serie("The Office", 9, "Comedia", "Greg Daniels");
-		misSeries[4] = new Serie("Juego de tronos", 8, "Novela de fantasía", "David Benioff y D.B.Weiss");
+		misSeries[4] = new Serie("Juego de tronos", 8, "Novela de fantasÃ­a", "David Benioff y D.B.Weiss");
 
 		misVideojuegos[0] = new Videojuego("Rimworld", 90, "Indie", "Paradox");
 		misVideojuegos[1] = new Videojuego("The Long Dark", 55, "Survival", "Paradox");
@@ -32,16 +32,16 @@ public class MainApp {
 		misVideojuegos[1].entregar();
 		misVideojuegos[4].entregar();
 
-		// invocamos el método que calcula la cantidad de unidades entregadas pasándole
-		// como parámetro arrays
+		// invocamos el mÃ©todo que calcula la cantidad de unidades entregadas pasÃ¡ndole
+		// como parÃ¡metro arrays
 		cantidadesEntregadas(misSeries, misVideojuegos);
 		System.out.println("");
-		// invocamos el método que muestra la serie con la cantidad máxima de temporadas
-		// pasándole como parámetro array de series
+		// invocamos el mÃ©todo que muestra la serie con la cantidad mÃ¡xima de temporadas
+		// pasÃ¡ndole como parÃ¡metro array de series
 		serieMaxTemporadas(misSeries);
 		System.out.println("");
-		// invocamos el método que muestra el videojuego con la cantidad máxima de horas
-		// estimadas pasándole como parámetro array de videojuegos
+		// invocamos el mÃ©todo que muestra el videojuego con la cantidad mÃ¡xima de horas
+		// estimadas pasÃ¡ndole como parÃ¡metro array de videojuegos
 		videojuegoMaxHorasEstimadas(misVideojuegos);
 		
 	}
@@ -81,7 +81,7 @@ public class MainApp {
 				serieMaxTemporadas = serie[i].getNumeroTemporadas();
 			}
 		}
-		System.out.println("La serie con la cantidad máxima de temporadas: ");
+		System.out.println("La serie con la cantidad mÃ¡xima de temporadas: ");
 		System.out.println(serie[posicionMaxTemporadas].toString());
 
 	}
@@ -100,43 +100,10 @@ public class MainApp {
 				videojuegoMaxTemporadas = videojuego[i].getHorasEstimadas();
 			}
 		}
-		System.out.println("El videojuego con la cantidad máxima de horas estimadas: ");
+		System.out.println("El videojuego con la cantidad mÃ¡xima de horas estimadas: ");
 		System.out.println(videojuego[posicionMaxTemporadas].toString());
 	}
 	
-	
-	//////Correccion Adria QUeralt
-	/*
-	 * El enunciado especifica que el constructor de Serie sera de todos los atributos, excepto entregado, por lo tanto entregado tendrias que darle el valor false ya que no lo especificas
-	 * 
-	 * 	// constructor con todos los atributos como parámetros, exepto de entregado
-		public Serie(String titulo, int numeroTemporadas, String genero, String creador) {
 
-			this.titulo = titulo;
-			this.numeroTemporadas = numeroTemporadas;
-			this.genero = genero;
-			this.creador = creador;
-		}
-		
-	* 	// constructor con todos los atributos exepto entregado
-		public Videojuego(String titulo, int horasEstimadas, String genero, String companya) {
-	
-			this.titulo = titulo;
-			this.horasEstimadas = horasEstimadas;
-			this.genero = genero;
-			this.companya = companya;
-		}
-	* 
-	* 	///////////////// No entiendo como funciona
-	*		@Override
-		public void compareTo(Object a) {
-	
-			if (a instanceof Videojuego) {
-				System.out.println(((Videojuego) a).getHorasEstimadas());
-			}
-	
-		}	
-	* ////////////// TO DO LO DEMAS ESTUPENDO
-	*/
 	
 }
