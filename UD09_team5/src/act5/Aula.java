@@ -26,7 +26,7 @@ public class Aula {
 		this.profesor = crearProfesor();
 		this.estudiantes = crearArrayEstudiantes();
 		//this.seRealizaClase = hacemosClase();
-		mensajeFinal();
+		//mensajeFinal();
 	}
 
 
@@ -56,15 +56,13 @@ public class Aula {
 		if (!profesorCoincidaMateria()) {
 			text += "El profesor de "+ profesor.getQueMateria() +" no coincide con la materia "+tipoClase+"\n";
 			hacemosClase = false;
-		}
-		if (profesor.isEsAusente()) {
+		}else if (profesor.isEsAusente()) {
 			text += "El profesor no esta disponible\n";
 			hacemosClase = false;
-		}
-		if (asistenciaMitadClase()) {
+		}else if (!asistenciaMitadClase()) {
 			String alumnosfaltantes = "";
 			for (int i = 0; i < estudiantes.size(); i++) {
-				if(estudiantes.get(i).isEsAusente()) {
+				if(estudiantes.get(i).isEsAusente()) {// true == no estan
 					alumnosfaltantes +=  estudiantes.get(i).getNombre()+", ";
 				}
 			}
@@ -72,22 +70,29 @@ public class Aula {
 			hacemosClase = false;
 		}
 		if (!hacemosClase) {
-			System.out.println(text); // mensaje de que no se hace clase
+			System.out.println(text); // mensaje de que no se hace clase por culpa de los q no estan
 		}
 		return hacemosClase;
 	}
-
+	public void mostrarEstudiantes() {
+		for (int i = 0; i < estudiantes.size(); i++) {
+			System.out.println(estudiantes.get(i).nombre);
+		}
+		System.out.println("En total hay "+ estudiantes.size());
+	}
+	
 	public void mensajeFinal() {
+		
 		if (hacemosClase()) {
 			System.out.println("Grupo notas chicos\n");
 			for (int i = 0; i < estudiantes.size(); i++) {
-				if (estudiantes.get(i).isEsAusente() && estudiantes.get(i).getSexo().equals("hombre")) {
+				if (!estudiantes.get(i).isEsAusente() && estudiantes.get(i).getSexo().equals("hombre")) {
 					System.out.println(estudiantes.get(i).nombre + " saco una nota de " + estudiantes.get(i).getCalificacion());
 				}
 			}
 			System.out.println("\nGrupo notas chicas\n");
 			for (int i = 0; i < estudiantes.size(); i++) {
-				if (estudiantes.get(i).isEsAusente() && estudiantes.get(i).getSexo().equals("mujer")) {
+				if (!estudiantes.get(i).isEsAusente() && estudiantes.get(i).getSexo().equals("mujer")) {
 					System.out.println(estudiantes.get(i).nombre + " saco una nota de " + estudiantes.get(i).getCalificacion());
 				}
 			}
@@ -112,11 +117,12 @@ public class Aula {
 		int controlAsistencia = 0;
 		int mitadAlumnos = cantidadAlumnos;
 		for (int i = 0; i < this.estudiantes.size(); i++) {
-			if (this.estudiantes.get(i).isEsAusente()) {// asiste a clase ?
+			//System.out.println(estudiantes.get(i).getNombre()+ " no estan? "+estudiantes.get(i).isEsAusente());
+			if (!this.estudiantes.get(i).isEsAusente()) {// asiste a clase ?
 				controlAsistencia++;
 			}
 		}
-		if ((mitadAlumnos / 2) <= controlAsistencia) {
+		if ((mitadAlumnos / 2) < controlAsistencia) { //50% falta de clase
 			return true;
 		}
 		return false;
@@ -176,8 +182,10 @@ public class Aula {
 	}
 
 
-
 	public String[] getMATERIAS() {
 		return MATERIAS;
 	}
+
+
+
 }

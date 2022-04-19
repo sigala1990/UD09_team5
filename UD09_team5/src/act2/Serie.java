@@ -6,6 +6,8 @@ package act2;
 
 public class Serie implements Entregable {
 
+	//
+	final boolean ENTREGADO_CONST = false; 
 	// atributos
 	private String titulo;
 	private int numeroTemporadas;
@@ -18,7 +20,7 @@ public class Serie implements Entregable {
 
 		this.titulo = "";
 		this.numeroTemporadas = 3;
-		this.entregado = false;
+		this.entregado = ENTREGADO_CONST;
 		this.genero = "";
 		this.creador = "";
 
@@ -31,7 +33,7 @@ public class Serie implements Entregable {
 		this.creador = creador;
 		this.genero = "";
 		this.numeroTemporadas = 3;
-		this.entregado = false;
+		this.entregado = ENTREGADO_CONST;
 	}
 
 	// constructor con todos los atributos como parámetros, exepto de entregado
@@ -41,6 +43,7 @@ public class Serie implements Entregable {
 		this.numeroTemporadas = numeroTemporadas;
 		this.genero = genero;
 		this.creador = creador;
+		this.entregado = ENTREGADO_CONST;
 	}
 
 	// getters y setters
@@ -96,14 +99,7 @@ public class Serie implements Entregable {
 		return entregado;
 	}
 
-	@Override
-	public void compareTo(Object a) {
 
-		if (a instanceof Videojuego) {
-			System.out.println(((Videojuego) a).getHorasEstimadas());
-		}
-
-	}
 
 	@Override
 	public String toString() {
