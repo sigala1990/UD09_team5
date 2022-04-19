@@ -97,13 +97,7 @@ public class Videojuego implements Entregable {
 		return entregado;
 	}
 
-	@Override
-	public void compareTo(Object a) {
 
-		if (a instanceof Serie) {
-			System.out.println(((Serie) a).getNumeroTemporadas());
-		}
-	}
 
 	@Override
 	public String toString() {

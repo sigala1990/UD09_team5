@@ -17,7 +17,7 @@ public class Profesor extends Persona {
 		super();
 		this.edad = edadAleatorio();
 		this.queMateria = obtenerMateria();
-		this.esAusente =  ausenciaAleatorio(); //TODO falta crear la varible esAusente en la clase Persona
+		this.esAusente =  ausenciaAleatorio();
 		
 	}
 
@@ -30,9 +30,6 @@ public class Profesor extends Persona {
 		this.queMateria = queMateria;
 	}
 
-	public String[] getMATERIAS() {
-		return MATERIAS;
-	}
 
 	// comprobamos la disponibilidad del profesor
 	public boolean ausenciaAleatorio() {

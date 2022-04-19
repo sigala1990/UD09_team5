@@ -14,36 +14,16 @@ public class MainApp {
 		System.out.println(profesor.isEsAusente()); //boolean se visualiza a través de is(nombre método)
 		*/
 		//instancializamos la clase Aula pasándole por parámetros objetos de las clases-hijas
-		Aula aula = new Aula(101,10, "física");
+		Aula aula = new Aula(101,50, "física");
 		
-	
 		//aula.mostrarAsistenciaAlumnos();
-		System.out.println();
+		aula.mostrarEstudiantes();
+	
+
 		
 		
 		
-		
-		
-		//////////////CORRECIONES////////////////
-		//getCalificacion retorna siempre 0
-		/*
-		 * 	public Estudiante() {
-			super();
-			this.calificacion = 0;
-			}
-			
-			
-			
-			
-		// el metodo numeroNota() devuelve String cuando debe devolver Double	
-		
-		//metodo que da una nota entre 0 a 10
-		public String numeroNota () { 
-			double notar= Math.random()*(9)+1;
-			return String.format("%.2f", notar);
-	}
-			
-		 */
+
 	}
 
 }

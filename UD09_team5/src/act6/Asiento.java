@@ -7,7 +7,6 @@ public class Asiento {
 	private String posicion;
 	private Espectador espectador;
 	
-	
 	public Asiento(String posicion){
 		this.posicion = posicion;
 		this.ocupado = false;

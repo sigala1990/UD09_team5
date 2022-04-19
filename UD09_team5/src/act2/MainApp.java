@@ -43,7 +43,7 @@ public class MainApp {
 		// invocamos el método que muestra el videojuego con la cantidad máxima de horas
 		// estimadas pasándole como parámetro array de videojuegos
 		videojuegoMaxHorasEstimadas(misVideojuegos);
-		
+				
 	}
 
 	public static void cantidadesEntregadas(Serie[] serie, Videojuego[] videojuego) {
@@ -103,7 +103,5 @@ public class MainApp {
 		System.out.println("El videojuego con la cantidad máxima de horas estimadas: ");
 		System.out.println(videojuego[posicionMaxTemporadas].toString());
 	}
-	
 
-	
 }
