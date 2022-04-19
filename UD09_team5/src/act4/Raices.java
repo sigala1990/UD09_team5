@@ -54,6 +54,7 @@ public class Raices {
 
 	// mostrar el caso de una única raiz
 	public void obtenerRaiz() {
+		
 		if (getDiscriminante() == 0) {
 			System.out.println("Es una única raiz");
 		}

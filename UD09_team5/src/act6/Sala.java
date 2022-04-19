@@ -98,9 +98,9 @@ public class Sala {
 				keyValue = "";
 				keyValue = alpha[i] + numeric[j];
 				asientos[i][j] = new Asiento(keyValue);
-			//	System.out.print(asientos[i][j].getPosicion() + " ");
+				System.out.print(asientos[i][j].getPosicion() + " ");
 				if (j == 8) {
-					//System.out.println("\n");
+					System.out.println("\n");
 				}
 			}
 		}
