@@ -54,11 +54,10 @@ public class Raices {
 
 	// mostrar el caso de una única raiz
 	public void obtenerRaiz() {
-		obtenerRaices();//conflict
-		c = a;//conflict
-		/*if (getDiscriminante() == 0) {
+		
+		if (getDiscriminante() == 0) {
 			System.out.println("Es una única raiz");
-		}*/
+		}
 	}
 
 	// evaluar cada caso (1 solución, 2 soluciones, 0 soluciones)

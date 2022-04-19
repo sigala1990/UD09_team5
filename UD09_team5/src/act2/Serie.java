@@ -99,15 +99,7 @@ public class Serie implements Entregable {
 		return entregado;
 	}
 
-	@Override
-	public void compareTo(Object a) {
 
-		if (a instanceof Videojuego) {
-			
-			System.out.println(((Videojuego) a).getHorasEstimadas());
-		}
-
-	}
 
 	@Override
 	public String toString() {
